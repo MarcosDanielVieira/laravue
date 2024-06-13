@@ -17,6 +17,8 @@
 
 %default-layout-vertical-nav-floating-navbar-overlay {
   isolation: isolate;
+  position: fixed;
+  width: 79.5%;
 
   &::after {
     position: absolute;
@@ -42,5 +44,11 @@
     -webkit-mask: linear-gradient(black, black 18%, transparent 100%);
     mask: linear-gradient(black, black 18%, transparent 100%);
     /* stylelint-enable */
+  }
+}
+
+@media (min-width: 200px) {
+  %default-layout-vertical-nav-floating-navbar-overlay {
+    width: 100%;
   }
 }
